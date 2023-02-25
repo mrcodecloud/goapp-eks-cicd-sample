@@ -1,6 +1,8 @@
-*.go     linguist-language=Go
-*.yaml   linguist-language=YAML
+* linguist-vendored
+* linguist-generated
+* linguist-detectable
+* linguist-documentation
 
-# Exclude the Dockerfile from linguist-language detection
-Dockerfile linguist-vendored
-
+!(*.go|*.yaml) linguist-generated linguist-detectable
+*.go linguist-language=Go
+*.yaml linguist-language=YAML
