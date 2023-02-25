@@ -28,3 +28,26 @@ GitHub Actions will automatically build a Docker image of your Go application an
 
 This project has the following structure:
 
+```
+├── .github
+│ └── workflows
+│ └── ci-cd.yaml
+├── deployment.yaml
+├── Dockerfile
+├── go.mod
+├── go.sum
+├── main_test.go
+└── main.go
+```
+
+- `.github/workflows/ci-cd.yaml`: The GitHub Actions workflow that triggers the build and deployment process.
+- `deployment.yaml`: The Kubernetes manifest that describes how to deploy the Docker image to EKS.
+- `Dockerfile`: The Dockerfile that specifies how to build a Docker image of the Go application.
+- `go.mod` and `go.sum`: The dependencies for the Go application.
+- `main.go`: The actual application code.
+
+Note that this is just a sample project, and you may want to modify the project structure to suit your specific needs.
+
+## License
+
+This sample project is licensed under the MIT License.
