@@ -1,0 +1,22 @@
+# Compiled Object files, Static and Dynamic libs (Shared Objects)
+*.o
+*.a
+*.so
+
+# Folders
+_bin/
+_vendor/
+.idea/
+.vscode/
+
+# Go specific
+*.exe
+*.exe~
+*.dll
+*.dylib
+*.test
+*.out
+
+# Testing
+/coverage/
+/artifacts/
