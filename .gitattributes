@@ -1,2 +1,6 @@
 *.go     linguist-language=Go
 *.yaml   linguist-language=YAML
+
+# Exclude the Dockerfile from linguist-language detection
+Dockerfile linguist-vendored
+
