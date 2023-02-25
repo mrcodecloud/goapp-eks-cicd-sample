@@ -1,1 +1,2 @@
-* !$go_extension linguist-language=Go
+*.go     linguist-language=Go
+*.yaml   linguist-language=YAML
