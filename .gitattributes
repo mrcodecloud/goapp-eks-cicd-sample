@@ -9,4 +9,4 @@
 # Set YAML files to be treated as YAML
 *.yml linguist-language=YAML
 *.yaml linguist-language=YAML
-*.yaml linguist-language=Go
+*.go linguist-language=Go
