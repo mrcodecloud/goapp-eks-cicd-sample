@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ env.K8S_DEPLOYMENT_NAME }}
+  namespace: {{ env.K8S_NAMESPACE }}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: {{ env.IMAGE_NAME }}
+  template:
+    metadata:
+      labels:
+        app: {{ env.IMAGE_NAME }}
+    spec:
+      containers:
+        - name: {{ env.IMAGE_NAME }}
+          image: {{ env.AWS_ACCOUNT_ID }}.dkr.ecr.{{ env.AWS_REGION }}.amazonaws.com/{{ env.IMAGE_NAME }}:{{ github.sha }}
+          ports:
+              - containerPort: 8080
+          env:
+            - name: ENVIRONMENT
+              value: "prod"
