@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: {{ env.IMAGE_NAME }}
-          image: {{ env.AWS_ACCOUNT_ID }}.dkr.ecr.{{ env.AWS_REGION }}.amazonaws.com/{{ env.IMAGE_NAME }}:{{ github.sha }}
+          image: {{ env.DOCKER_IMAGE }}
           ports:
               - containerPort: 8080
           env:
