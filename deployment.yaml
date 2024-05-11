@@ -1,21 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ env.K8S_DEPLOYMENT_NAME }}
-  namespace: {{ env.K8S_NAMESPACE }}
+  name: trivohdemo
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: {{ env.IMAGE_NAME }}
+      app: trivohdemo
   template:
     metadata:
       labels:
-        app: {{ env.IMAGE_NAME }}
+        app: trivohdemo
     spec:
       containers:
-        - name: {{ env.IMAGE_NAME }}
-          image: {{ env.DOCKER_IMAGE }}
+        - name: trivohdemo
+          image: DOCKER_IMAGE
           ports:
               - containerPort: 8080
           env:
