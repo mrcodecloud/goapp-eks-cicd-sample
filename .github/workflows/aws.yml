@@ -38,7 +38,7 @@ env:
   ECS_TASK_DEFINITION: deployment.yaml # set this to the path to your Amazon ECS task definition
                                                # file, e.g. .aws/task-definition.json
   CONTAINER_NAME: trivoheks/eks/goapp          # set this to the name of the container in the
-  IMAGE_TAG: latest                                             # containerDefinitions section of your task definition
+                                              # containerDefinitions section of your task definition
 
 permissions:
   contents: read
