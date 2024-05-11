@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: trivohdemo
-          image: DOCKER_IMAGE
+          image: 905418116413.dkr.ecr.eu-west-2.amazonaws.com/trivoheks:latest
           ports:
               - containerPort: 8080
           env:
